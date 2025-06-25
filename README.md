@@ -42,6 +42,7 @@ You can view this question as an approximation problem and try to map all the en
 Log-likelihood
 
 A more sophisticated possibility is to maximize the following log-likelihood function:
+
 <img width="395" alt="Screenshot 2023-03-07 at 15 11 51" src="https://github.com/user-attachments/assets/4ac5eed8-01dd-431e-9882-b84d984bef19" />
 
 Where bi is the bucket boundaries, ni is the number of records in each bucket, ki is the number of defaults in each bucket, and pi = ki / ni is the probability of default in the bucket. This function considers how rough the discretization is and the density of defaults in each bucket. This problem could be addressed by splitting it into subproblems, which can be solved incrementally (i.e., through a dynamic programming approach). For example, you can break the problem into two subproblems, creating five buckets for FICO scores ranging from 0 to 600 and five buckets for FICO scores ranging from 600 to 850. Refer to this page for more context behind a likelihood function. This page may also be helpful for background on dynamic programming. 
